@@ -1,0 +1,114 @@
+/*add by Hirwan*/
+/* color 
+    pink: #f1049a;
+    blue: #4936a9;
+*/
+
+.lx-menu-text {
+    text-align: right;
+    width: 100%;
+  }
+  
+  
+  .lx-title-cat {
+    font-size: 16px;
+    font-weight: bold;
+    color: #f1049a;
+  }
+  
+  .lx-menu-cat {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .lx-menu-title {
+    color: #fff;
+    font-size: 18px;
+    text-transform:camelcase;
+    margin: 5px 0 0 0;
+  }
+  
+  
+  
+  .lx-bg {
+    width: 100%;
+  /*   padding: 15px; */
+  /*   position: absolute; */
+  /*   left: 10%; */
+    font-family: 'Tahoma';
+    text-align: center;
+    
+  }
+  
+  .card-box {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
+  
+  
+  .lx-menu {
+    color: #f1049a;
+    background: #fff;
+    background-size: 115%;
+    background-position: center;
+    width: 350px;
+    padding: 24px;
+    box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
+      0 15px 40px rgba(166, 173, 201, 0.2);
+    margin: 10px;
+    transition: 0.1s;
+    text-align: center;
+  }
+  
+  .lx-menu:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 10px rgba(154, 160, 185, 0.05),
+      0 20px 40px rgba(166, 173, 201, 0.4);
+  }
+  
+  
+  .lx-card-header {
+    display: flex;
+  }
+  
+  .lx-card-body {
+    color: #333;
+    display: block;
+    width: 100%;
+    text-align: right;
+  }
+  
+  .lx-img {
+    height: 120px !important;
+  }
+  
+  .lx-button {
+    font-size: 14px;
+    line-height: 8px;
+    background-color:  #f1049a;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+  /*    border-radius: 45px; */
+    padding: 10px;
+    transition: box-shadow 0.3s;
+    text-decoration: none;
+    color: #fff;
+    margin-top: 8px;
+  }
+  
+  .lx-hr {
+    margin-top: 0px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #eee;
+  }
+  
+  .lx-footer {
+      display:flex; 
+      padding: 16px;
+  }
+  
+  /* add by Hirwan */
+  /* add by Hirwan - Slider */

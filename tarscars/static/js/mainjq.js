@@ -21,3 +21,24 @@
       });
     }); // end DOM ready
   })(jQuery); // end jQuery
+
+  function priceTable() {
+    var whiteLeft = $('.white-left').innerWidth(),
+      greenWidth = $('.green-width').innerWidth(),
+      whiteHeight = $('.price').innerHeight();
+  
+    $('.bg-white').css({
+      'left': whiteLeft,
+      'bottom': whiteHeight
+    });
+  
+    $('.bg-green').css({
+      'width': greenWidth
+    });
+  };
+  
+  $(document).ready(priceTable);
+  $(window).on('resize load', priceTable);
+
+
+  

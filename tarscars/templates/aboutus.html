@@ -5,100 +5,172 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <style>
-   *{
-    margin: 0;
-    padding: 0;
-    font-family: "Open Sans",sans-serif;
-    box-sizing: border-box;
-}
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+		html {
+        scroll-behavior: smooth;
+        }
+		
+		body{
+		margin:0;
+		font-family: 'Source Sans Pro', sans-serif;
+		}
+		
+		.title{
+		font-size:2em;
+		color:#8c0c60;
+		display:block;
+		}
+		
+		.sub-title{
+		font-size:0.8em;
+		color:gray;
+		display:block;
+		}
+		
+		.btn1{
+		padding:10px 20px;
+		background:transparent;
+		border:1px solid #8c0c3c;
+		color:#8c0c3c;
+		border-radius:3px;
+		outline:none;
+		transition:0.5s;
+		}
+		
+		.btn1:hover{
+		background:#8c0c3c;
+		color:#fff;
+		}
+		
+		.btn2{
+		padding:10px 20px;
+		border-radius:3px;
+		background:#1e1e1e;
+		border:1px solid #1e1e1e;
+		color:#fff;
+		outline:none;
+		transition:0.5s;
+		}
+		
+		.btn2:hover{
+		background:transparent;
+		color:#1e1e1e;
+		}
+		
+		.title:before{
+		content:" ";
+		font-family:"FontAwesome";
+		font-size:30px;
+		}
+		
+		a{
+		text-decoration:none;
+		}
+		
+		.section2,.section3{
+		width:90%;
+		margin:5% 0%;
+		margin-left:auto;
+		margin-right:auto;
+		}
+		
+		.section2 table,.section3 table{
+		width:100%;
+		}
+		
+		.section2 table td,.section3 table td{
+		width:50%;
+		}
+		
+		.section2 table td img,.section3 table td img{
+		width:80%;
+		height:70%;
+		margin-left:auto;
+		margin-right:auto;
+		box-shadow:0px 6px 16px -6px rgba(1,1,1,0.5);
+		}
+		
+		.section3 table td img{
+		float:right;
+		}
+		
+		
+		@media (max-width:720px){
+		.section2 table td, .section3 table td{
+		width:100%;
+		display:block;
+		}
+		.section3 table td img{
+		float:none;
+		margin-top:4%;
+		}
+		.section2 table td img,.section3 table td img{
+		width:100%;
+		height:60%;
+		}
+		}
 
-body{
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #f1f1f1;
+@media (max-width:300px){
+  .section2,.section3{
+    font-size:12px;
+  }
+  .section3 table td img{
+		float:none;
+		margin-top:8%;
+		}
+  .btn1,.btn2{
+    padding:5px 10px;
+  }
 }
-
-.about-section{
-    background: url(https://fadzrinmadu.github.io/hosted-assets/responsive-about-us-section-using-html/pic.jpg) no-repeat left;
-    background-size: 55%;
-    background-color: #fdfdfd;
-    overflow: hidden;
-    padding: 100px 0;
-}
-
-.inner-container{
-    width: 55%;
-    float: right;
-    background-color: #fdfdfd;
-    padding: 150px;
-}
-
-.inner-container h1{
-    margin-bottom: 30px;
-    font-size: 30px;
-    font-weight: 900;
-}
-
-.text{
-    font-size: 13px;
-    color: #545454;
-    line-height: 30px;
-    text-align: justify;
-    margin-bottom: 40px;
-}
-
-.skills{
-    display: flex;
-    justify-content: space-between;
-    font-weight: 700;
-    font-size: 13px;
-}
-
-@media screen and (max-width:1200px){
-    .inner-container{
-        padding: 80px;
-    }
-}
-
-@media screen and (max-width:1000px){
-    .about-section{
-        background-size: 100%;
-        padding: 100px 40px;
-    }
-    .inner-container{
-        width: 100%;
-    }
-}
-
-@media screen and (max-width:600px){
-    .about-section{
-        padding: 0;
-    }
-    .inner-container{
-        padding: 60px;
-    }
+.footer{
+  position:fixed;
+  box-shadow:0px 6px 16px -6px rgba(1,1,1,0.5);
+  background:#1e1e1e;
+  padding:10px 20px;
+  color:gray;
+  font-size:13px;
+  position:fixed;
+  bottom:10px;
+  right:0;
 }
     </style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Aboutus</title>
 </head>
 
 <body>
-    <div class="about-section">
-        <div class="inner-container">
-          <h1>About Us</h1>
-          <p class="text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus velit ducimus, enim inventore earum, eligendi nostrum pariatur necessitatibus eius dicta a voluptates sit deleniti autem error eos totam nisi neque voluptates sit deleniti autem error eos totam nisi neque.
-          </p>
-          <div class="skills">
-            <span>Web Design</span>
-            <span>Photoshop & Illustrator</span>
-            <span>Coding</span>
-          </div>
-        </div>
-      </div>
+    <section class="section2" id="AboutUs">
+		<table>
+		<tr>
+		<td>
+		<img src="https://images.unsplash.com/photo-1622329821376-a19fd6002562?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" alt="AboutUs">
+		</td>
+		<td>
+		<span class="title">About Us</span>
+		<span class="sub-title">Lorem ipsum dolor sit amet, consectetur adi</span>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+		</td>
+		</tr>
+		</table>
+		</section>
+		
+		<section class="section3" id="OurMission">
+		<table>
+		<tr>
+		<td>
+		<span class="title">Our Mission</span>
+		<span class="sub-title">Lorem ipsum dolor sit amet, consectetur adi</span>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+		</td>
+		<td>
+		<img src="https://images.unsplash.com/photo-1632823471565-1ecf94f8799a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80" alt="AboutUs">
+		</td>
+		</tr>
+		</table>
+		</section>
+
       
 </body>
 </html>

@@ -1,0 +1,36 @@
+
+    <div class="form-wrap">
+		<div class="tabs">
+			<h3 class="signup-tab"><a class="active" href="#signup-tab-content">Sign Up</a></h3>
+			<h3 class="login-tab"><a href="#login-tab-content">Login</a></h3>
+		</div><!--.tabs-->
+
+		<div class="tabs-content">
+			<div id="signup-tab-content" class="active">
+				<form class="signup-form" action="/signin" method="post">
+					{% csrf_token %}
+					<input type="email" class="input" name="email" id="user_email" autocomplete="off" placeholder="Email">
+					<input type="text" class="input" id="user_name" name="username" autocomplete="off" placeholder="Username">
+					<input type="text" class="input" name="firstname" id="user_email" autocomplete="off" placeholder="Firstname">
+					<input type="text" class="input" id="user_name" name="lastname" autocomplete="off" placeholder="Lastname">
+					<input type="password" class="input" id="user_pass" name="password" autocomplete="off" placeholder="Password">
+					<input type="submit" class="button" value="Sign Up">
+				</form><!--.login-form-->
+				<div class="help-text">
+					<p><a href="#">{{ msg }}</a></p>
+				</div>
+			</div><!--.signup-tab-content-->
+
+			<div id="login-tab-content">
+				<form class="login-form" action="/loginrequest" method="post">
+					{% csrf_token %}
+					<input type="text" class="input" id="user_login" name="username" autocomplete="off" placeholder="Email or Username">
+					<input type="password" class="input" id="user_pass" name="password" autocomplete="off" placeholder="Password">
+					<input type="submit" class="button" value="Login">
+				</form><!--.login-form-->
+				<div class="help-text">
+					<p><a href="#">{{ errormsg }}</a></p>
+				</div>
+			</div><!--.login-tab-content-->
+		</div><!--.tabs-content-->
+	</div><!--.form-wrap-->

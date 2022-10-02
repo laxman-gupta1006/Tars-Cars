@@ -5,10 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tarscars</title>
     <link href={% static 'css/main.css' %} rel="stylesheet">
+    <link href={% static 'css/services.css' %} rel="stylesheet">
     <script src={% static 'js/jq.js' %}></script>
     <script src={% static 'js/mainjq.js' %}></script>
+    <script src={% static 'js/login.js' %}></script>
+    <link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/brands.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/solid.css' %}" rel="stylesheet" type="text/css">
+    <link href={% static 'css/login.css' %} rel="stylesheet">
 </head>
 <body>
     <section class="navigation">
@@ -20,48 +26,82 @@
             <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
             <ul class="nav-list">
               <li>
-                <a href="#!">Home</a>
+                <a href="/">Home</a>
               </li>
               <li>
-                <a href="#!">About</a>
+                <a href="/aboutus">About</a>
               </li>
               <li>
                 <a href="#!">Services</a>
                 <ul class="nav-dropdown">
                   <li>
-                    <a href="#!">Web Design</a>
+                    <a href="#!">Car wash</a>
                   </li>
                   <li>
-                    <a href="#!">Web Development</a>
+                    <a href="#!">Wheel care</a>
                   </li>
                   <li>
-                    <a href="#!">Graphic Design</a>
+                    <a href="#!">Car AC Repair</a>
+                  </li>
+                  <li>
+                    <a href="#!">Car AC Repair</a>
+                  </li>
+                  <li>
+                    <a href="#!">Car Battery</a>
+                  </li>
+                  <li>
+                    <a href="#!">Denting and Painting</a>
+                  </li>
+                  <li>
+                    <a href="#!">Custom repair</a>
+                  </li>
+                  <li>
+                    <a href="#!">Periodic service</a>
                   </li>
                 </ul>
               </li>
               <li>
-                <a href="#!">Pricing</a>
+                <a href="#price">Pricing</a>
               </li>
               <li>
-                <a href="#!">Portfolio</a>
-                <ul class="nav-dropdown">
-                  <li>
-                    <a href="#!">Web Design</a>
-                  </li>
-                  <li>
-                    <a href="#!">Web Development</a>
-                  </li>
-                  <li>
-                    <a href="#!">Graphic Design</a>
-                  </li>
-                </ul>
+                <a href="/contactus">Contact</a>
               </li>
-              <li>
-                <a href="#!">Contact</a>
-              </li>
+              {% if request.user.is_authenticated %}
+              <li class="usernameu">
+              <a href="/logoutrequest">Logout </a>
+            </li>
+          {% else %}
+            <li class="usernameu">
+             <a> Hi Guest!</a>
+            </li>
+          {% endif %}
             </ul>
           </nav>
         </div>
       </section>
+      <div id="mainpage">
+        <div id="banner">
+          {% if request.user.is_authenticated %}
+          {% include "contactus.html" %}
+      {% else %}
+        {% include "registration/login.html" %}
+      {% endif %}
+          
+        </div>
+        <br>
+        <center><h2>Services</h2>    <br>
+        <hr></center>
+        <br>
+        {% include "services.html" %}
+      </div>
+      <br>
+      <center><h2 id="price">Pricing</h2>    <br>
+        <hr></center>
+        <br>
+        {% include "servicebundle.html" %}
+       
+      <div class="footerarea">
+      {% include "footer.html"%}
+    </div>
 </body>
 </html>
